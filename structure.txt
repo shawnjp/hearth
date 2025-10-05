@@ -1,0 +1,12 @@
+sovereign-hearth/
+├── CNAME                              # Contains: sovereign-hearth.audhdities.com
+├── .nojekyll                          # Empty file
+├── index.html                         # Sovereign Hearth app
+└── assets/
+    ├── css/
+    │   └── pagan-ritual.css           # Sovereign Hearth styles
+    └── js/
+        ├── quantum-continuity.js
+        ├── energy-cards.js
+        ├── intention-manager.js
+        └── energy-manager.js
