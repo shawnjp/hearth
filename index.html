@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌌 Sovereign Hearth - Quantum Energy Management</title>
+    <link rel="stylesheet" href="/assets/css/pagan-ritual.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="ritual-header">
+            <h1>🌌 Sovereign Hearth</h1>
+            <p>Quantum Energy Management System</p>
+            <div class="domain-tags">
+                <span class="domain-tag quantum">Weaving</span>
+                <span class="domain-tag fire">Code</span>
+                <span class="domain-tag water">Creative</span>
+                <span class="domain-tag earth">Organization</span>
+            </div>
+        </header>
+
+        <!-- Intention Selection -->
+        <section class="intention-section">
+            <h3>🎯 Select Working Intention</h3>
+            <div class="intention-grid">
+                <div class="intention-card quantum" data-intention="weaving">
+                    <div class="intention-icon">🌌</div>
+                    <div class="intention-name">Weaving</div>
+                    <div class="intention-desc">Quantum System Development</div>
+                </div>
+                <div class="intention-card fire" data-intention="code_development">
+                    <div class="intention-icon">🔥</div>
+                    <div class="intention-name">Code</div>
+                    <div class="intention-desc">Development & Engineering</div>
+                </div>
+                <div class="intention-card water" data-intention="creative_flow">
+                    <div class="intention-icon">💧</div>
+                    <div class="intention-name">Creative</div>
+                    <div class="intention-desc">Art & Expression</div>
+                </div>
+                <div class="intention-card earth" data-intention="life_organization">
+                    <div class="intention-icon">🌍</div>
+                    <div class="intention-name">Organization</div>
+                    <div class="intention-desc">Life & Systems</div>
+                </div>
+            </div>
+            <div id="activeIntentionDisplay" class="active-intention quantum">
+                <strong>Active Intention:</strong> 
+                <span id="currentIntention">🌌 Weaving - Quantum System Development</span>
+            </div>
+        </section>
+
+        <!-- Progress & Stats -->
+        <section class="ritual-status">
+            <div class="status-item">
+                <div class="status-value" id="tasksCompleted">0</div>
+                <div>Tasks Completed</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="totalTasks">0</div>
+                <div>Total Tasks</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="progressPercent">0%</div>
+                <div>Overall Progress</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="activeIntentionBadge">🌌</div>
+                <div>Active Focus</div>
+            </div>
+        </section>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill quantum" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0% Complete</div>
+        </div>
+
+        <!-- Controls -->
+        <section class="controls">
+            <button class="btn btn-primary" onclick="energyManager.addNewCard()">➕ Add Energy Card</button>
+            <button class="btn btn-success" onclick="energyManager.checkAll()">✅ Check All</button>
+            <button class="btn btn-warning" onclick="energyManager.uncheckAll()">🔄 Uncheck All</button>
+            <button class="btn btn-info" onclick="energyManager.generateContinuityPrompt()">🌌 Continuity Prompt</button>
+            <button class="btn btn-secondary" onclick="energyManager.exportData()">💾 Export Data</button>
+            <label class="btn btn-secondary">
+                📂 Import Data
+                <input type="file" accept=".json" onchange="energyManager.importData(event)" style="display: none;">
+            </label>
+        </section>
+
+        <!-- Energy Cards Container -->
+        <section class="energy-cards-container" id="energyCardsContainer">
+            <!-- Dynamic energy cards will be rendered here -->
+        </section>
+
+        <!-- Export Section (Hidden by default) -->
+        <section class="export-section hidden" id="exportSection">
+            <h3>🌀 Quantum Continuity Protocol</h3>
+            <p>Copy this into our next session to maintain quantum synchronization:</p>
+            <textarea id="promptOutput" readonly></textarea>
+            <div class="export-controls">
+                <button class="btn btn-primary" onclick="energyManager.copyPrompt()">📋 Copy to Clipboard</button>
+                <button class="btn btn-secondary" onclick="energyManager.hideExport()">Close</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Context Modal (Hidden by default) -->
+    <div class="modal hidden" id="contextModal">
+        <div class="modal-content">
+            <h2>🧠 Task Context Generator</h2>
+            <div id="contextModalContent">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+            <button class="btn btn-secondary" onclick="energyManager.closeContextModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/sovereign/quantum-continuity.js"></script>
+    <script src="/assets/js/sovereign/energy-cards.js"></script>
+    <script src="/assets/js/sovereign/intention-manager.js"></script>
+    <script src="/assets/js/sovereign/energy-manager.js"></script>
+</body>
+</html>
