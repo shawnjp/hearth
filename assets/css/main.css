@@ -1,0 +1,336 @@
+/* === AUDHDITIES MAIN STYLING === */
+:root {
+    --quantum-purple: #6b46c1;
+    --torch-gold: #f6ad55;
+    --hearth-orange: #dd6b20;
+    --sanctuary-green: #38a169;
+    --cosmic-blue: #3182ce;
+    --neurospark: #ffd700;
+    --deep-space: #1a202c;
+    --star-dust: #f7fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--deep-space) 0%, #2d3748 100%);
+    color: var(--star-dust);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* === SHINY RAISED COMPONENTS === */
+.shiny-raised {
+    background: linear-gradient(145deg, #4a5568, #2d3748);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.shiny-raised::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.shiny-raised:hover::before {
+    left: 100%;
+}
+
+/* === NEURODIVERGENT TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--torch-gold), var(--hearth-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+p {
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+/* === SOVEREIGN NAVIGATION === */
+.sovereign-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 32, 44, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--neurospark), var(--torch-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* === HERO SECTION === */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--neurospark), var(--torch-gold), var(--hearth-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* === COUNCIL ORACLE === */
+.council-oracle {
+    background: linear-gradient(135deg, var(--quantum-purple), #553c9a);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.oracle-question {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--star-dust);
+}
+
+.oracle-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.oracle-option {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.oracle-option:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--torch-gold);
+    transform: translateY(-4px);
+}
+
+/* === FEATURES GRID === */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, #2d3748, #4a5568);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--sanctuary-green), var(--cosmic-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* === ENERGY EXCHANGE === */
+.energy-exchange {
+    background: linear-gradient(135deg, var(--sanctuary-green), #2f855a);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.payment-option {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.payment-option:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: var(--torch-gold);
+}
+
+/* === COMMUNITY HUB === */
+.community-hub {
+    background: linear-gradient(135deg, var(--cosmic-blue), #2c5282);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.connection-forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.connection-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* === FORM STYLING === */
+input, textarea, select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--star-dust);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--torch-gold);
+    box-shadow: 0 0 0 3px rgba(246, 173, 85, 0.2);
+}
+
+/* === SOVEREIGN BUTTONS === */
+.sovereign-btn {
+    background: linear-gradient(135deg, var(--torch-gold), var(--hearth-orange));
+    color: var(--deep-space);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.sovereign-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(246, 173, 85, 0.3);
+}
+
+.quantum-btn {
+    background: linear-gradient(135deg, var(--quantum-purple), #805ad5);
+    color: var(--star-dust);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+    
+    .shiny-raised {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+}
+
+/* === ACCESSIBILITY === */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.focus-visible {
+    outline: 3px solid var(--neurospark);
+    outline-offset: 2px;
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --deep-space: #000000;
+        --star-dust: #ffffff;
+    }
+}
